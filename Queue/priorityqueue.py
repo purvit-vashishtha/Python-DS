@@ -26,7 +26,7 @@ class PriorityQueue:
     def __repr__(self):
         return "PriorityQueue({!r})".format(self.priorityqueuelist)
 
-    def push(self, item, priority=None):
+    def push(self, item, priority=None):            # method to push item in the queue and set priority accordingly
         priority = item if priority is None else priority
         node = PriorityQueueNode(item, priority)
         for index, current in enumerate(self.priorityqueuelist):
@@ -36,13 +36,13 @@ class PriorityQueue:
 
         self.priorityqueuelist.append(node)
 
-    def pop(self):
+    def pop(self):                          # pops the element which has higher priority
         return self.priorityqueuelist.pop().data
 
     def size(self):                     # returns the size of queue
         return len(self.priorityqueuelist)
 
-    def print(self):
+    def print(self):                    # prints the Priority Queue
         for i in self.priorityqueuelist:
             print(i)
 
