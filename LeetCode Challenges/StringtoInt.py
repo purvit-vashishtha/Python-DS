@@ -1,3 +1,5 @@
+# Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer.
+
 class Solution:
     def myAtoi(self, s: str) -> int:
         s = s.lstrip()
